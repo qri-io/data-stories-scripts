@@ -1,0 +1,19 @@
+{
+  "name": "b67-wait-times",
+  "version": "1.0.0",
+  "description": "",
+  "main": "log.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fs-extra": "^8.1.0",
+    "jsonexport": "^2.4.1",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
+    "xml-js": "^1.6.11"
+  }
+}
