@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="1">
+        <name>CA State Parks with Hike &amp; Bike sites</name>
+        <description>Generated from the dataset at https://qri.cloud/feep/ca_state_parks .
+Read more at https://medium.com/@feeping/scraping-the-california-state-parks-search-page-for-offline-access .</description>
+        <Placemark id="3">
+            <name>Anza-Borrego Desert</name>
+            <description>https://www.parks.ca.gov/?page_id=638</description>
+            <Point id="2">
+                <coordinates>-116.406,33.2569,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5">
+            <name>Big Basin Redwoods</name>
+            <description>https://www.parks.ca.gov/?page_id=540</description>
+            <Point id="4">
+                <coordinates>-122.22203,37.17159,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="7">
+            <name>Bothe-Napa Valley</name>
+            <description>https://www.parks.ca.gov/?page_id=477</description>
+            <Point id="6">
+                <coordinates>-122.5257,38.5533,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9">
+            <name>Brannan Island</name>
+            <description>https://www.parks.ca.gov/?page_id=487</description>
+            <Point id="8">
+                <coordinates>-121.69845,38.11059,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="11">
+            <name>Candlestick Point</name>
+            <description>https://www.parks.ca.gov/?page_id=519</description>
+            <Point id="10">
+                <coordinates>-122.3816119,37.7127512,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="13">
+            <name>Carpinteria</name>
+            <description>https://www.parks.ca.gov/?page_id=599</description>
+            <Point id="12">
+                <coordinates>-119.52101,34.39246,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15">
+            <name>Castle Crags</name>
+            <description>https://www.parks.ca.gov/?page_id=454</description>
+            <Point id="14">
+                <coordinates>-122.31835,41.14999,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="17">
+            <name>Castle Rock</name>
+            <description>https://www.parks.ca.gov/?page_id=538</description>
+            <Point id="16">
+                <coordinates>-122.09578,37.23059,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="19">
+            <name>Caswell Memorial</name>
+            <description>https://www.parks.ca.gov/?page_id=557</description>
+            <Point id="18">
+                <coordinates>-121.1829,37.70003,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="21">
+            <name>China Camp</name>
+            <description>https://www.parks.ca.gov/?page_id=466</description>
+            <Point id="20">
+                <coordinates>-122.4626,38.00171,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="23">
+            <name>Clear Lake</name>
+            <description>https://www.parks.ca.gov/?page_id=473</description>
+            <Point id="22">
+                <coordinates>-122.81412,39.01106,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="25">
+            <name>D. L. Bliss</name>
+            <description>https://www.parks.ca.gov/?page_id=505</description>
+            <Point id="24">
+                <coordinates>-120.103,38.9779,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="27">
+            <name>Del Norte Coast Redwoods</name>
+            <description>https://www.parks.ca.gov/?page_id=414</description>
+            <Point id="26">
+                <coordinates>-124.098,41.7028,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="29">
+            <name>Donner Memorial</name>
+            <description>https://www.parks.ca.gov/?page_id=503</description>
+            <Point id="28">
+                <coordinates>-120.238,39.3254,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="31">
+            <name>El Capitán</name>
+            <description>https://www.parks.ca.gov/?page_id=601</description>
+            <Point id="30">
+                <coordinates>-120.024,34.46,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="33">
+            <name>Emma Wood </name>
+            <description>https://www.parks.ca.gov/?page_id=604</description>
+            <Point id="32">
+                <coordinates>-119.317,34.2818,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="35">
+            <name>Gaviota</name>
+            <description>https://www.parks.ca.gov/?page_id=606</description>
+            <Point id="34">
+                <coordinates>-120.229459,34.473146,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="37">
+            <name>Grizzly Creek Redwoods</name>
+            <description>https://www.parks.ca.gov/?page_id=421</description>
+            <Point id="36">
+                <coordinates>-123.904,40.4869,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="39">
+            <name>Grover Hot Springs</name>
+            <description>https://www.parks.ca.gov/?page_id=508</description>
+            <Point id="38">
+                <coordinates>-119.843,38.696,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="41">
+            <name>Half Moon Bay</name>
+            <description>https://www.parks.ca.gov/?page_id=531</description>
+            <Point id="40">
+                <coordinates>-122.445,37.4665,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="43">
+            <name>Hearst San Simeon</name>
+            <description>https://www.parks.ca.gov/?page_id=590</description>
+            <Point id="42">
+                <coordinates>-121.125442,35.599388,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="45">
+            <name>Henry W. Coe</name>
+            <description>https://www.parks.ca.gov/?page_id=561</description>
+            <Point id="44">
+                <coordinates>-121.548,37.188,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="47">
+            <name>Hollister Hills</name>
+            <description>https://www.parks.ca.gov/?page_id=1179</description>
+            <Point id="46">
+                <coordinates>-121.414,36.7696,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="49">
+            <name>Humboldt Redwoods</name>
+            <description>https://www.parks.ca.gov/?page_id=425</description>
+            <Point id="48">
+                <coordinates>-123.908,40.3072,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="51">
+            <name>Jedediah Smith Redwoods</name>
+            <description>https://www.parks.ca.gov/?page_id=413</description>
+            <Point id="50">
+                <coordinates>-124.083,41.797,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="53">
+            <name>Lake Perris</name>
+            <description>https://www.parks.ca.gov/?page_id=651</description>
+            <Point id="52">
+                <coordinates>-117.172,33.8811,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="55">
+            <name>Leo Carrillo</name>
+            <description>https://www.parks.ca.gov/?page_id=616</description>
+            <Point id="54">
+                <coordinates>-118.935,34.0449,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="57">
+            <name>MacKerricher</name>
+            <description>https://www.parks.ca.gov/?page_id=436</description>
+            <Point id="56">
+                <coordinates>-123.79,39.489,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="59">
+            <name>Manchester</name>
+            <description>https://www.parks.ca.gov/?page_id=437</description>
+            <Point id="58">
+                <coordinates>-123.715,38.9601,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="61">
+            <name>McArthur-Burney Falls Memorial</name>
+            <description>https://www.parks.ca.gov/?page_id=455</description>
+            <Point id="60">
+                <coordinates>-121.649648,41.011042,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="63">
+            <name>McGrath</name>
+            <description>https://www.parks.ca.gov/?page_id=607</description>
+            <Point id="62">
+                <coordinates>-119.255465,34.220896,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="65">
+            <name>Morro Bay</name>
+            <description>https://www.parks.ca.gov/?page_id=594</description>
+            <Point id="64">
+                <coordinates>-120.841981,35.346529,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="67">
+            <name>Mount Diablo</name>
+            <description>https://www.parks.ca.gov/?page_id=517</description>
+            <Point id="66">
+                <coordinates>-121.925476,37.852026,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="69">
+            <name>Mount San Jacinto</name>
+            <description>https://www.parks.ca.gov/?page_id=636</description>
+            <Point id="68">
+                <coordinates>-116.613414,33.839356,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="71">
+            <name>Mount Tamalpais</name>
+            <description>https://www.parks.ca.gov/?page_id=471</description>
+            <Point id="70">
+                <coordinates>-122.579961,37.927367,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="73">
+            <name>New Brighton</name>
+            <description>https://www.parks.ca.gov/?page_id=542</description>
+            <Point id="72">
+                <coordinates>-121.937873,36.979908,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="75">
+            <name>Ocotillo Wells</name>
+            <description>https://www.parks.ca.gov/?page_id=1217</description>
+            <Point id="74">
+                <coordinates>-116.167309,33.151224,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="77">
+            <name>Patrick&amp;#39;s Point</name>
+            <description>https://www.parks.ca.gov/?page_id=417</description>
+            <Point id="76">
+                <coordinates>-124.14959,41.139833,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="79">
+            <name>Pfeiffer Big Sur</name>
+            <description>https://www.parks.ca.gov/?page_id=570</description>
+            <Point id="78">
+                <coordinates>-121.7873362,36.2528003,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="81">
+            <name>Point Mugu</name>
+            <description>https://www.parks.ca.gov/?page_id=630</description>
+            <Point id="80">
+                <coordinates>-119.0125956,34.0706176,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="83">
+            <name>Portola Redwoods</name>
+            <description>https://www.parks.ca.gov/?page_id=539</description>
+            <Point id="82">
+                <coordinates>-122.212354,37.262368,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="85">
+            <name>Prairie Creek Redwoods</name>
+            <description>https://www.parks.ca.gov/?page_id=415</description>
+            <Point id="84">
+                <coordinates>-124.020914,41.363838,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="87">
+            <name>Refugio</name>
+            <description>https://www.parks.ca.gov/?page_id=603</description>
+            <Point id="86">
+                <coordinates>-120.06907,34.465125,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="89">
+            <name>Richardson Grove</name>
+            <description>https://www.parks.ca.gov/?page_id=422</description>
+            <Point id="88">
+                <coordinates>-123.790383,40.020343,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="91">
+            <name>Russian Gulch</name>
+            <description>https://www.parks.ca.gov/?page_id=432</description>
+            <Point id="90">
+                <coordinates>-123.805746,39.330662,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="93">
+            <name>Salt Point</name>
+            <description>https://www.parks.ca.gov/?page_id=453</description>
+            <Point id="92">
+                <coordinates>-123.332697,38.567101,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="95">
+            <name>Salton Sea</name>
+            <description>https://www.parks.ca.gov/?page_id=639</description>
+            <Point id="94">
+                <coordinates>-115.917236,33.509884,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="97">
+            <name>Samuel P. Taylor</name>
+            <description>https://www.parks.ca.gov/?page_id=469</description>
+            <Point id="96">
+                <coordinates>-122.729548,38.01959,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="99">
+            <name>Silverwood Lake</name>
+            <description>https://www.parks.ca.gov/?page_id=650</description>
+            <Point id="98">
+                <coordinates>-117.334971,34.280526,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="101">
+            <name>Sinkyone Wilderness</name>
+            <description>https://www.parks.ca.gov/?page_id=429</description>
+            <Point id="100">
+                <coordinates>-123.877716,39.864936,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="103">
+            <name>Sonoma Coast</name>
+            <description>https://www.parks.ca.gov/?page_id=451</description>
+            <Point id="102">
+                <coordinates>-123.109,38.4309,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="105">
+            <name>Standish-Hickey</name>
+            <description>https://www.parks.ca.gov/?page_id=423</description>
+            <Point id="104">
+                <coordinates>-123.726676,39.878028,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="107">
+            <name>Sunset</name>
+            <description>https://www.parks.ca.gov/?page_id=544</description>
+            <Point id="106">
+                <coordinates>-121.83746,36.89701,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="109">
+            <name>Turlock Lake</name>
+            <description>https://www.parks.ca.gov/?page_id=555</description>
+            <Point id="108">
+                <coordinates>-120.59552,37.62652,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="111">
+            <name>Van Damme</name>
+            <description>https://www.parks.ca.gov/?page_id=433</description>
+            <Point id="110">
+                <coordinates>-123.79071,39.27424,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
