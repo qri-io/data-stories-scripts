@@ -9,6 +9,10 @@ import simplekml  # pip3 install simplekml
 # This script runs on a newer version of the dataset than
 # parkindex_to_csv.py generates. We need to download from
 # qri.cloud
+#
+# ❯ qri add feep/ca_state_parks
+# ❯ qri checkout feep/ca_state_parks
+
 csvfile = csv.DictReader(open("./ca_state_parks/body.csv", "r"))
 
 
