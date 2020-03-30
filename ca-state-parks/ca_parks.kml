@@ -3,7 +3,7 @@
     <Document id="1">
         <name>CA State Parks with Hike &amp; Bike sites</name>
         <description>Generated from the dataset at https://qri.cloud/feep/ca_state_parks .
-Read more at https://medium.com/@feeping/scraping-the-california-state-parks-search-page-for-offline-access .</description>
+Read more at https://medium.com/qri-io/scraping-the-california-state-parks-search-page-for-offline-access-d05c48be69a9 .</description>
         <Placemark id="3">
             <name>Anza-Borrego Desert</name>
             <description>https://www.parks.ca.gov/?page_id=638</description>

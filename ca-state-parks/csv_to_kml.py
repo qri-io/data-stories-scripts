@@ -20,7 +20,7 @@ def writekml(hits):
     kml = simplekml.Kml(
         name="CA State Parks with Hike & Bike sites",
         description="""Generated from the dataset at https://qri.cloud/feep/ca_state_parks .
-Read more at https://medium.com/@feeping/scraping-the-california-state-parks-search-page-for-offline-access .""",
+Read more at https://medium.com/qri-io/scraping-the-california-state-parks-search-page-for-offline-access-d05c48be69a9 .""",
     )
 
     for i in hits:
