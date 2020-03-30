@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='utf-8' />
+      <title>New York State Bandcamp Artists</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+      <link href='css/styles.css' rel='stylesheet' />
+  </head>
+  <body>
+    <!-- the sidebar is fixed width and will contain a title, some text, and buttons -->
+    <div id='sidebar'>
+      <h3>New York's Local Music Scenes</h3>
+      <p>This map shows Bandcamp info about independent artists from New York.</p>
+
+      <div id='feature-info'>
+      </div>
+    </div>
+    <!-- close sidebar -->
+    <!-- this is the map container, which will hold the mapboxGL map -->
+    <div id='map-container'></div>
+
+    <!-- Load mapboxGL, jQuery, then our local javascript files -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src='js/scripts.js'></script>
+
+  </body>
+</html>
