@@ -41,9 +41,26 @@ ON turnstile_observations(net_exits);
 
 ## Import weekly CSVs
 
-Import using `sh import-csv.sh TIMESTAMP`
+### Shell Scripts
 
-Once new data has been inserted, update the net_entries and net_exits with this query
+For bulk import (these were only used the first time for adding 2019 and 2020 data):
+
+`download-csv-sh` will download the csv corresponding with each date in `weekly-timestamps.json`
+
+`import.sh` will run `import-csv.sh` for each date in `weekly-timestamps.json`
+
+#### import-csv.sh
+
+Import a single CSV using `sh import-csv.sh TIMESTAMP`
+
+import-csv will create a temporary table for the data, copy the raw data from the csv, and INSERT it into `turnstile_observations` with the appropriate transformations and filters:
+
+- remove duplicate entries for the same turnstile and timestamp
+- create `id` and `unit_id` from existing fields
+- combine `time` and `date` strings into a real time field `observed_at`
+
+
+Once new data has been inserted, update the net_entries and net_exits with this query:
 
 ```
 WITH net_observations AS (
