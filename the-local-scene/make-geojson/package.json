@@ -1,0 +1,15 @@
+{
+  "name": "the-local-scene",
+  "version": "1.0.0",
+  "description": "",
+  "main": "make-geojson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "csvparser": "^0.1.4"
+  }
+}
