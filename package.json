@@ -1,0 +1,33 @@
+{
+  "name": "data-stories-scripts",
+  "version": "1.0.0",
+  "description": "A collection of scripts used for data logging in support of _Data Stories_ on qri.io.",
+  "main": "index.js",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^8.1.0",
+    "graceful-fs": "^4.2.3",
+    "jsonexport": "^2.4.1",
+    "jsonfile": "^4.0.0",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
+    "sax": "^1.2.4",
+    "universalify": "^0.1.2",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qri-io/data-stories-scripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qri-io/data-stories-scripts/issues"
+  },
+  "homepage": "https://github.com/qri-io/data-stories-scripts#readme"
+}
