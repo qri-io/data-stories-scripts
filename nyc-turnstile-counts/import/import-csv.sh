@@ -20,7 +20,7 @@ CREATE TABLE csv_$1 (
   exits integer
 );
 
-\copy csv_$1 FROM '/Users/chriswhong/Sites/turnstile-counts/source-csv/$1.csv' WITH DELIMITER ',' CSV HEADER;
+\copy csv_$1 FROM '/Users/chriswhong/Sites/data-stories-scripts/nyc-turnstile-counts/source-csv/$1.csv' WITH DELIMITER ',' CSV HEADER;
 
 INSERT INTO turnstile_observations
 SELECT * FROM (
@@ -46,21 +46,5 @@ ORDER BY unit_id, observed_at
 ON CONFLICT (id) DO NOTHING;
 
 DROP TABLE csv_$1;
-
-WITH net_observations AS (
-SELECT
-   id,
-   entries - lag(entries, 1) OVER w AS calculated_net_entries,
-   exits - lag(exits, 1) OVER w AS calculated_net_exits
- FROM turnstile_observations
- WHERE net_entries IS NULL AND net_exits IS NULL
- WINDOW w AS (PARTITION BY unit_id)
-)
-UPDATE turnstile_observations
-SET
- net_entries = CASE WHEN abs(calculated_net_entries) < 10000 THEN abs(calculated_net_entries) END,
- net_exits = CASE WHEN abs(calculated_net_exits) < 10000 THEN abs(calculated_net_exits) END
-FROM net_observations
-WHERE turnstile_observations.id = net_observations.id;
 
 EOF

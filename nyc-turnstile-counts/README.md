@@ -37,6 +37,9 @@ ON turnstile_observations(net_entries);
 
 CREATE INDEX idx_turnstile_observations_net_exits
 ON turnstile_observations(net_exits);
+
+CREATE INDEX idx_turnstile_observations_unit_id_observed_at
+ON turnstile_observations(unit_id, observed_at);
 ```
 
 ## Import weekly CSVs
@@ -62,27 +65,35 @@ import-csv will create a temporary table for the data, copy the raw data from th
 
 Once new data has been inserted, update the net_entries and net_exits with this query:
 
+(Took 40:15 on all 13.5M rows, maybe faster if the UPDATE only happens WHERE entries/exits are null?  The CTE only takes 1 minute)
+
 ```
+SET work_mem = '256MB';
 WITH net_observations AS (
 SELECT
-   CONCAT(controlarea, remoteunit, subunit_channel_position, observed_at::text) AS id,
+   id,
    entries - lag(entries, 1) OVER w AS calculated_net_entries,
    exits - lag(exits, 1) OVER w AS calculated_net_exits
  FROM turnstile_observations
- WHERE net_entries IS NULL AND net_exits IS NULL
- WINDOW w AS (PARTITION BY controlarea, remoteunit, subunit_channel_position ORDER BY observed_at)
+ WINDOW w AS (PARTITION BY unit_id ORDER BY observed_at)
 )
 UPDATE turnstile_observations
 SET
  net_entries = CASE WHEN abs(calculated_net_entries) < 10000 THEN abs(calculated_net_entries) END,
  net_exits = CASE WHEN abs(calculated_net_exits) < 10000 THEN abs(calculated_net_exits) END
 FROM net_observations
-WHERE CONCAT(controlarea, remoteunit, subunit_channel_position, observed_at::text) = net_observations.id
+WHERE turnstile_observations.id = net_observations.id
+AND net_entries IS NULL;
 ```
+
+Ran in 3 minutes, 20 seconds
 
 ## Daily Counts by individual turnstile
 
-Now aggregate into daily counts for each unit_id
+Now aggregate into daily counts for each unit_id.
+Add 2 hours to observed_at for deciding which date it should fall into.  (midnight falls to following day, meaning a 4-hour observation period ending at midnight gets counted on the next day, which is bad.  With a 2 hour offset, observations through 1:59am will count to the previous day)
+
+Took 1:35 on 13.5M rows
 
 ```
 DROP TABLE IF EXISTS daily_subunit;
@@ -90,17 +101,19 @@ CREATE TABLE daily_subunit AS (
   SELECT
     unit_id,
     (array_agg(remoteunit))[1] AS remoteunit,
-    date_trunc('day', observed_at)::date AS date,
-    SUM(ABS(net_entries)) AS entries,
-    SUM(ABS(net_exits)) AS exits
+    date_trunc('day', observed_at + interval '2h')::date AS date,
+    SUM(net_entries) AS entries,
+    SUM(net_exits) AS exits
   FROM turnstile_observations
-  GROUP BY unit_id, date_trunc('day', observed_at)
+  GROUP BY unit_id, date_trunc('day', observed_at + interval '2h')
 );
 ```
 
 ## Daily Counts by station/station complex
 
 Now aggregate units up to stations/complexes, join with remote_complex_lookup to find the station/complex that corresponds with the remoteunit
+
+(Took 6 seconds to execute)
 
 ```
 DROP table if exists daily_complex;
@@ -206,3 +219,22 @@ CREATE TABLE daily_counts_2020 AS (
 )
 
 ```
+
+# Weekly Update
+
+Get the datestring (e.g. 200404) for the CSV to download from http://web.mta.info/developers/turnstile.html
+
+curl it:
+
+curl -o source-csv/200411.csv http://web.mta.info/developers/data/nyct/turnstile/turnstile_200411.txt | sed 's/"//g'
+
+Next import it
+
+`cd import`
+`sh import-csv.sh 200404`
+
+Manually run the update SQL
+
+Manually update daily_subunit and daily_complex
+
+Manually cut 2019 and 2020 subsets with SQL
