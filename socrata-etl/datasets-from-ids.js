@@ -3,7 +3,7 @@ const processDataset = require('./process-dataset')
 
 // helper function to fetch a dataset's row count
 const getRowCount = async (id) => {
-  const res = await fetch(`https://data.cityofchicago.org/api/id/${id}.json?$select=count(*)%20as%20count`)
+  const res = await fetch(`https://data.cityofnewyork.us/api/id/${id}.json?$select=count(*)%20as%20count`)
     .then(d => d.json())
 
   const [{ count }] = res
