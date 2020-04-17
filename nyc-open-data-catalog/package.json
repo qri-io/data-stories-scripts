@@ -1,0 +1,11 @@
+{
+  "name": "nyc-open-data-catalog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "csv-string": "^3.2.0",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0"
+  }
+}
