@@ -6,7 +6,7 @@ const buildComponent = require('./util/build-component')
 
 // helper function to fetch socrata metadata
 const fetchMetaData = (datasetId) => {
-  const metadataUrl = `https://data.cityofchicago.org/api/views/${datasetId}.json`
+  const metadataUrl = `https://data.cityofnewyork.us/api/views/${datasetId}.json`
     // get the metadata json
   console.log('getting metadata...', metadataUrl)
   return fetch(metadataUrl).then(d => d.json())
@@ -25,7 +25,7 @@ const processDataset = async (id) => {
 
       const readme = buildComponent.readme(metadata)
 
-      const bodyBuffer = await fetch(`https://data.cityofchicago.org/api/views/${id}/rows.csv?accessType=DOWNLOAD`).then(d => d.arrayBuffer())
+      const bodyBuffer = await fetch(`https://data.cityofnewyork.us/api/views/${id}/rows.csv?accessType=DOWNLOAD`).then(d => d.arrayBuffer())
 
 
       await writer(`tmp/${id}/readme.md`, readme)

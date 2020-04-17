@@ -27,13 +27,13 @@ const meta = (sourceMetadata, datasetId) => {
         email: undefined
       }
     ],
-    accessUrl: `https://data.cityofchicago.org/api/views/${datasetId}/rows.csv?accessType=DOWNLOAD
+    accessUrl: `https://data.data.cityofnewyork.us/api/views/${datasetId}/rows.csv?accessType=DOWNLOAD
 `,
     createdAt,
     downloadCount,
     rowsUpdatedAt,
-    // accrualPeriodicity: metadata.custom_fields.Update['Update Frequency'].trim(),
-    // agency: metadata.custom_fields['Dataset Information']['Agency']
+    accrualPeriodicity: metadata.custom_fields.Update['Update Frequency'].trim(),
+    agency: metadata.custom_fields['Dataset Information']['Agency']
   }
 }
 
@@ -44,7 +44,7 @@ ${description}
 
 ## Import Details
 
-This qri dataset was programmatically created from a dataset published on the Chicago Open Data Portal.  [Original Dataset on data.cityofchicago.org/](https://data.cityofchicago.org/d/d/${id})
+This qri dataset was programmatically created from a dataset published on the Chicago Open Data Portal.  [Original Dataset on data.data.cityofnewyork.us/](https://data.data.cityofnewyork.us/d/d/${id})
 
 The latest update ran on ${Date(Date.now()).toString()}`
 }
