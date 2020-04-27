@@ -1,0 +1,13 @@
+{
+  "name": "nyc-traffic-speeds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^9.0.0",
+    "google-polyline": "^1.0.3",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
+    "tsv": "^0.2.0"
+  }
+}
