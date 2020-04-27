@@ -222,19 +222,8 @@ CREATE TABLE daily_counts_2020 AS (
 
 # Weekly Update
 
-Get the datestring (e.g. 200404) for the CSV to download from http://web.mta.info/developers/turnstile.html
+1 - Run `sh update-database.sh YYMMDD` for the date of the new CSV
+2 - Be sure to switch to the correct qri username (nyc-transit-data), then run `qri save nyc-transit-data/turnstile_daily_counts_2020 --body tmp/daily_counts_2020.csv --title "update data for week ending April 18, 2020"`
+3 - Run `qri publish nyc-transit-data/turnstile_daily_counts_2020`
 
-curl it:
-
-curl -o source-csv/200411.csv http://web.mta.info/developers/data/nyct/turnstile/turnstile_200411.txt | sed 's/"//g'
-
-Next import it
-
-`cd import`
-`sh import-csv.sh 200404`
-
-Manually run the update SQL
-
-Manually update daily_subunit and daily_complex
-
-Manually cut 2019 and 2020 subsets with SQL
+3.5 `SELECT date, sum(entries) FROM daily_counts_2020 GROUP BY date ORDER BY date ASC` to update the google sheets chart
