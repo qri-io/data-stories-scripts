@@ -6,7 +6,7 @@ load("bsoup.star", "bsoup")
 
 
 def download(ctx):
-    parkindex = http.get("https://www.parks.ca.gov/parkindex")
+    res = http.get("https://www.parks.ca.gov/parkindex")
 
     # local, for testing
     # res = http.get("http://localhost:8000/parkindex")
@@ -99,7 +99,7 @@ def transform(ds, ctx):
         error("Wrong number of vParksJson’s")
 
     # there is no `re.findall.group()`, so we have to process further
-    jsonblob = re.findall("\[.*]", jsonblobhits[0])[0]
+    jsonblob = re.findall(r"\[.*]", jsonblobhits[0])[0]
 
     parsed = json.loads(jsonblob)
 
