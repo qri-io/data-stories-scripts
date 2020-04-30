@@ -1,3 +1,8 @@
+"""Extract park information from
+https://www.parks.ca.gov/parkindex
+to generate body.csv and structure.json"""
+
+
 load("http.star", "http")
 load("encoding/csv.star", "csv")
 load("encoding/json.star", "json")
