@@ -183,7 +183,7 @@ CREATE TABLE daily_counts_2019 AS (
 159384 rows
 
 
-And the same for 2019 YTD:
+And the same for 2020 YTD:
 
 ```
 DROP TABLE IF EXISTS daily_counts_2020;
@@ -225,5 +225,8 @@ CREATE TABLE daily_counts_2020 AS (
 1 - Run `sh update-database.sh YYMMDD` for the date of the new CSV
 2 - Be sure to switch to the correct qri username (nyc-transit-data), then run `qri save nyc-transit-data/turnstile_daily_counts_2020 --body tmp/daily_counts_2020.csv --title "update data for week ending April 18, 2020"`
 3 - Run `qri publish nyc-transit-data/turnstile_daily_counts_2020`
+<<<<<<< HEAD
 
 3.5 `SELECT date, sum(entries) FROM daily_counts_2020 GROUP BY date ORDER BY date ASC` to update the google sheets chart
+=======
+>>>>>>> nyc-open-data-catalog
