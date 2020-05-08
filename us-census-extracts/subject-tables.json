@@ -1,0 +1,330 @@
+[
+   {
+      "label":"Age and Sex",
+      "name":"S0101"
+   },
+   {
+      "label":"Population 60 Years and Over in the United States",
+      "name":"S0102"
+   },
+   {
+      "label":"Population 60 Years and Over in Puerto Rico",
+      "name":"S0102PR"
+   },
+   {
+      "label":"Population 65 Years and Over in the United States",
+      "name":"S0103"
+   },
+   {
+      "label":"Population 65 Years and Over in Puerto Rico",
+      "name":"S0103PR"
+   },
+   {
+      "label":"Selected Characteristics of the Native and Foreign-Born Populations",
+      "name":"S0501"
+   },
+   {
+      "label":"Selected Characteristics of the Foreign-Born Population by Period of Entry into the United States",
+      "name":"S0502"
+   },
+   {
+      "label":"Selected Characteristics of the Foreign-Born Population by Period of Entry into Puerto Rico",
+      "name":"S0502PR"
+   },
+   {
+      "label":"Selected Characteristics of the Foreign-Born Population by Region of Birth: Europe",
+      "name":"S0503"
+   },
+   {
+      "label":"Selected Characteristics of the Foreign-Born Population by Region of Birth: Africa, Northern America, and Oceania",
+      "name":"S0504"
+   },
+   {
+      "label":"Selected Characteristics of the Foreign-Born Population by Region of Birth: Asia",
+      "name":"S0505"
+   },
+   {
+      "label":"Selected Characteristics of the Foreign-Born Population by Region of Birth: Latin America",
+      "name":"S0506"
+   },
+   {
+      "label":"Selected Characteristics of the Total and Native Populations in the United States",
+      "name":"S0601"
+   },
+   {
+      "label":"Selected Characteristics of the Total and Native Populations in Puerto Rico",
+      "name":"S0601PR"
+   },
+   {
+      "label":"Geographic Mobility by Selected Characteristics in the United States",
+      "name":"S0701"
+   },
+   {
+      "label":"Geographic Mobility by Selected Characteristics in Puerto Rico",
+      "name":"S0701PR"
+   },
+   {
+      "label":"Movers Between Regions",
+      "name":"S0702"
+   },
+   {
+      "label":"Commuting Characteristics by Sex",
+      "name":"S0801"
+   },
+   {
+      "label":"Means of Transportation to Work by Selected Characteristics",
+      "name":"S0802"
+   },
+   {
+      "label":"Means of Transportation to Work by Selected Characteristics for Workplace Geography",
+      "name":"S0804"
+   },
+   {
+      "label":"Children Characteristics",
+      "name":"S0901"
+   },
+   {
+      "label":"Characteristics of Teenagers 15 to 19 Years Old",
+      "name":"S0902"
+   },
+   {
+      "label":"Grandchildren Characteristics",
+      "name":"S1001"
+   },
+   {
+      "label":"Grandparents",
+      "name":"S1002"
+   },
+   {
+      "label":"Households and Families",
+      "name":"S1101"
+   },
+   {
+      "label":"Marital Status",
+      "name":"S1201"
+   },
+   {
+      "label":"Characteristics of People with a Marital Event in the Last 12 Months",
+      "name":"S1251"
+   },
+   {
+      "label":"Fertility",
+      "name":"S1301"
+   },
+   {
+      "label":"School Enrollment",
+      "name":"S1401"
+   },
+   {
+      "label":"Educational Attainment",
+      "name":"S1501"
+   },
+   {
+      "label":"Field of Bachelor's Degree for First Major",
+      "name":"S1502"
+   },
+   {
+      "label":"Language Spoken at Home",
+      "name":"S1601"
+   },
+   {
+      "label":"Limited English Speaking Households",
+      "name":"S1602"
+   },
+   {
+      "label":"Characteristics of People by Language Spoken at Home",
+      "name":"S1603"
+   },
+   {
+      "label":"Poverty Status in the Past 12 Months",
+      "name":"S1701"
+   },
+   {
+      "label":"Poverty Status in the Past 12 Months of Families",
+      "name":"S1702"
+   },
+   {
+      "label":"Selected Characteristics of People at Specified Levels of Poverty in the Past 12 Months",
+      "name":"S1703"
+   },
+   {
+      "label":"Disability Characteristics",
+      "name":"S1810"
+   },
+   {
+      "label":"Selected Economic Characteristics for the Civilian Noninstitutionalized Population by Disability Status",
+      "name":"S1811"
+   },
+   {
+      "label":"Income in the Past 12 Months",
+      "name":"S1901"
+   },
+   {
+      "label":"Mean Income in the Past 12 Months",
+      "name":"S1902"
+   },
+   {
+      "label":"Median Income in the Past 12 Months",
+      "name":"S1903"
+   },
+   {
+      "label":"Earnings in the Past 12 Months",
+      "name":"S2001"
+   },
+   {
+      "label":"Median Earnings in the Past 12 Months of Workers by Sex and Women's Earnings as a Percentage of Men's Earnings by Selected Characteristics",
+      "name":"S2002"
+   },
+   {
+      "label":"Veteran Status",
+      "name":"S2101"
+   },
+   {
+      "label":"Food Stamps/SNAP",
+      "name":"S2201"
+   },
+   {
+      "label":"Employment Status",
+      "name":"S2301"
+   },
+   {
+      "label":"Employment Characteristics of Families",
+      "name":"S2302"
+   },
+   {
+      "label":"Work Status in the Past 12 Months",
+      "name":"S2303"
+   },
+   {
+      "label":"Occupation by Sex for the Civilian Employed Population 16 Years and Over",
+      "name":"S2401"
+   },
+   {
+      "label":"Occupation by Sex for the Full-Time, Year-Round Civilian Employed Population 16 Years and Over",
+      "name":"S2402"
+   },
+   {
+      "label":"Industry by Sex for the Civilian Employed Population 16 Years and Over",
+      "name":"S2403"
+   },
+   {
+      "label":"Industry by Sex for the Full-Time, Year-Round Civilian Employed Population 16 Years and Over",
+      "name":"S2404"
+   },
+   {
+      "label":"Industry by Occupation for the Civilian Employed Population 16 Years and Over",
+      "name":"S2405"
+   },
+   {
+      "label":"Occupation by Class of Worker for the Civilian Employed Population 16 Years and Over",
+      "name":"S2406"
+   },
+   {
+      "label":"Industry by Class of Worker for the Civilian Employed Population 16 Years and Over",
+      "name":"S2407"
+   },
+   {
+      "label":"Class of Worker by Sex for the Civilian Employed Population 16 Years and Over",
+      "name":"S2408"
+   },
+   {
+      "label":"Class of Worker by Sex for the Full-Time, Year-Round Civilian Employed Population 16 Years and Over",
+      "name":"S2409"
+   },
+   {
+      "label":"Occupation by Sex and Median Earnings in the Past 12 Months for the Civilian Employed Population 16 Years and Over",
+      "name":"S2411"
+   },
+   {
+      "label":"Occupation by Sex and Median Earnings in the Past 12 Months for the Full-Time, Year-Round Civilian Employed Population 16 Years and Over",
+      "name":"S2412"
+   },
+   {
+      "label":"Industry by Sex and Median Earnings in the Past 12 Months for the Civilian Employed Population 16 Years and Over",
+      "name":"S2413"
+   },
+   {
+      "label":"Industry by Sex and Median Earnings in the Past 12 Months for the Full-Time, Year-Round Civilian Employed Population 16 Years and Over",
+      "name":"S2414"
+   },
+   {
+      "label":"Class of Worker by Sex and Median Earnings in the Past 12 Months for the Civilian Employed Population 16 Years and Over",
+      "name":"S2418"
+   },
+   {
+      "label":"Class of Worker by Sex and Median Earnings in the Past 12 Months for the Full-Time, Year-Round Civilian Employed Population 16 Years and Over",
+      "name":"S2419"
+   },
+   {
+      "label":"Occupancy Characteristics",
+      "name":"S2501"
+   },
+   {
+      "label":"Demographic Characteristics for Occupied Housing Units",
+      "name":"S2502"
+   },
+   {
+      "label":"Financial Characteristics",
+      "name":"S2503"
+   },
+   {
+      "label":"Physical Housing Characteristics for Occupied Housing Units",
+      "name":"S2504"
+   },
+   {
+      "label":"Financial Characteristics for Housing Units with a Mortgage",
+      "name":"S2506"
+   },
+   {
+      "label":"Financial Characteristics for Housing Units without a Mortgage",
+      "name":"S2507"
+   },
+   {
+      "label":"Characteristics of the Group Quarters Population in the United States",
+      "name":"S2601A"
+   },
+   {
+      "label":"Characteristics of the Group Quarters Population In Puerto Rico",
+      "name":"S2601APR"
+   },
+   {
+      "label":"Characteristics of the Group Quarters Population by Group Quarters Type (3 Types)",
+      "name":"S2602"
+   },
+   {
+      "label":"Characteristics of the Group Quarters Population by Group Quarters Type (5 Types)",
+      "name":"S2603"
+   },
+   {
+      "label":"Health Insurance Coverage Status",
+      "name":"S2701"
+   },
+   {
+      "label":"Selected Characteristics of the Uninsured in the United States",
+      "name":"S2702"
+   },
+   {
+      "label":"Selected Characteristics of the Uninsured in Puerto Rico",
+      "name":"S2702PR"
+   },
+   {
+      "label":"Private Health Insurance Coverage by Type and Selected Characteristics",
+      "name":"S2703"
+   },
+   {
+      "label":"Public Health Insurance Coverage by Type and Selected Characteristics",
+      "name":"S2704"
+   },
+   {
+      "label":"Types of Computers and Internet Subscriptions",
+      "name":"S2801"
+   },
+   {
+      "label":"Types of Internet Subscriptions by Selected Characteristics",
+      "name":"S2802"
+   },
+   {
+      "label":"Citizen, Voting-Age Population by Selected Characteristics",
+      "name":"S2902"
+   }
+]
