@@ -2,7 +2,11 @@
 
 echo $1
 
-psql postgresql://postgres:password@localhost << EOF
+USERNAME=${2:-postgres}
+PASSWORD=${3:-password}
+DATABASE=$4
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+psql postgresql://$USERNAME:$PASSWORD@localhost/$DATABASE << EOF
 
 DROP TABLE IF EXISTS csv_$1;
 
@@ -20,7 +24,7 @@ CREATE TABLE csv_$1 (
   exits integer
 );
 
-\copy csv_$1 FROM '/Users/chriswhong/Sites/data-stories-scripts/nyc-turnstile-counts/source-csv/$1.csv' WITH DELIMITER ',' CSV HEADER;
+\copy csv_$1 FROM '$DIR/../source-csv/$1.csv' WITH DELIMITER ',' CSV HEADER;
 
 INSERT INTO turnstile_observations
 SELECT * FROM (

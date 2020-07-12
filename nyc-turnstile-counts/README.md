@@ -48,13 +48,13 @@ ON turnstile_observations(unit_id, observed_at);
 
 For bulk import (these were only used the first time for adding 2019 and 2020 data):
 
-`download-csv-sh` will download the csv corresponding with each date in `weekly-timestamps.json`
+`import/download-csv-sh` will download the csv corresponding with each week
 
-`import.sh` will run `import-csv.sh` for each date in `weekly-timestamps.json`
+`import/import.sh` will run `import-csv.sh` for each week
 
 #### import-csv.sh
 
-Import a single CSV using `sh import-csv.sh TIMESTAMP`
+Import a single CSV using `import/import-csv.sh TIMESTAMP`
 
 import-csv will create a temporary table for the data, copy the raw data from the csv, and INSERT it into `turnstile_observations` with the appropriate transformations and filters:
 
@@ -222,11 +222,7 @@ CREATE TABLE daily_counts_2020 AS (
 
 # Weekly Update
 
-1 - Run `sh update-database.sh YYMMDD` for the date of the new CSV
-2 - Be sure to switch to the correct qri username (nyc-transit-data), then run `qri save nyc-transit-data/turnstile_daily_counts_2020 --body tmp/daily_counts_2020.csv --title "update data for week ending April 18, 2020"`
-3 - Run `qri publish nyc-transit-data/turnstile_daily_counts_2020`
-<<<<<<< HEAD
-
-3.5 `SELECT date, sum(entries) FROM daily_counts_2020 GROUP BY date ORDER BY date ASC` to update the google sheets chart
-=======
->>>>>>> nyc-open-data-catalog
+1. Run `sh update-database.sh YYMMDD` for the date of the new CSV
+2. Be sure to switch to the correct qri username (nyc-transit-data), then run `qri save nyc-transit-data/turnstile_daily_counts_2020 --body tmp/daily_counts_2020.csv --title "update data for week ending April 18, 2020"`
+3. Run `qri publish nyc-transit-data/turnstile_daily_counts_2020`
+4. `SELECT date, sum(entries) FROM daily_counts_2020 GROUP BY date ORDER BY date ASC` to update the google sheets chart
