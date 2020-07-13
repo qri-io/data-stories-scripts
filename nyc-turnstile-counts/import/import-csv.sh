@@ -25,7 +25,7 @@ CREATE TABLE csv_$1 (
 INSERT INTO turnstile_observations
 SELECT * FROM (
   SELECT
-    DISTINCT CONCAT(controlarea, remoteunit, subunit_channel_position, TO_TIMESTAMP(EXTRACT(EPOCH FROM (date::date + time::time)))) AS id,
+    DISTINCT CONCAT(controlarea, remoteunit, subunit_channel_position, TO_TIMESTAMP(EXTRACT(EPOCH FROM (date || ' ' || time)::timestamp at time zone 'America/New_York'))) AS id,
     CONCAT(controlarea, remoteunit, subunit_channel_position) AS unit_id,
     controlarea,
     remoteunit,
@@ -33,7 +33,7 @@ SELECT * FROM (
     station,
     linenames,
     division,
-    TO_TIMESTAMP(EXTRACT(EPOCH FROM (date::date + time::time))) AS observed_at,
+    TO_TIMESTAMP(EXTRACT(EPOCH FROM (date || ' ' || time)::timestamp at time zone 'America/New_York')) AS observed_at,
     description,
     entries,
     exits,
