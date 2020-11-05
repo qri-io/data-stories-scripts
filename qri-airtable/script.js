@@ -4,7 +4,7 @@ var deepEqual = require('deep-equal')
 const ObjectsToCsv = require('objects-to-csv')
 var debug = require('debug')('airtable-github-export')
 const fs = require('fs')
-const qri = require('./node-qri')
+const qri = require('@qri-io/qri-node')()
 
 
 const TEMP_DIR = '/tmp'
@@ -84,7 +84,7 @@ async function main() {
     })
 
     // qri push
-    await qri.publish('me/reef-tank-water-testing')
+    await qri.push('me/reef-tank-water-testing')
 }
 
 main()

@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@qri-io/qri-node@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@qri-io/qri-node/-/qri-node-0.0.2.tgz#9a0a872c7541ee5c452698171758ecdf5c383388"
+  integrity sha512-GvrR0Vh9gef7n479J2SiyBimGp9w21pzvIpWliykS4PRyz9CtoPd87FBy3wgDHP+j0dOS9hE7f6rileHtGbZlw==
+  dependencies:
+    fs-extra "9.0.1"
+
 "@types/node@^14.0.14":
   version "14.14.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.0.tgz#f1091b6ad5de18e8e91bdbd43ec63f13de372538"
@@ -178,7 +185,7 @@ foreach@^2.0.5:
   resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
   integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
 
-fs-extra@^9.0.1:
+fs-extra@9.0.1, fs-extra@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.1.tgz#910da0062437ba4c39fedd863f1675ccfefcb9fc"
   integrity sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==
