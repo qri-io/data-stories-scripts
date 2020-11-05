@@ -1,5 +1,5 @@
 const fs = require('fs')
-const qri = require('./node-qri')
+const qri = require('@qri-io/qri-node')()
 const fetch = require('node-fetch')
 
 const TEMP_DIR = '/tmp'
@@ -30,7 +30,7 @@ async function main() {
     })
 
     // qri push
-    await qri.publish('me/best-pizza-place-in-every-state')
+    await qri.push('me/best-pizza-place-in-every-state')
 }
 
 main()

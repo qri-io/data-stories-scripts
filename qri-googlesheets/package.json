@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@qri-io/qri-node": "^0.0.2",
     "airtable": "^0.10.0",
     "deep-equal": "^2.0.4",
     "dotenv": "^8.2.0",
