@@ -1,0 +1,11 @@
+{
+  "name": "nyc-nta-acs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "firstline": "^2.0.2",
+    "fs-extra": "^9.0.1"
+  }
+}
