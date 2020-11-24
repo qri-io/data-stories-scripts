@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 const slugify = require('slugify')
 const { writer } = require('./util/io')
 const buildComponent = require('./util/build-component')
-const qri = require('../../../qri/node-qri')
+const qri = require('@qri-io/qri-node')()
 
 // helper function to fetch socrata metadata
 const fetchMetaData = (domain, id) => {
@@ -15,20 +15,21 @@ const fetchMetaData = (domain, id) => {
 // given a domain and socrata 4x4, pull down data,
 // transform into qri component files,
 // save, and publish
-const processDataset = async (domain, id) => {
+const processDataset = async (domainConfig, id) => {
+  console.log('here', domainConfig.domain, id)
   return new Promise(async (resolve, reject) => {
     try {
-      const metadata = await fetchMetaData(domain, id)
-      const qriMeta = buildComponent.meta(metadata, domain)
+      const metadata = await fetchMetaData(domainConfig.domain, id)
+      const qriMeta = buildComponent.meta(metadata, domainConfig)
       console.log('Created Qri Meta', qriMeta)
 
       const structure = buildComponent.structure(metadata)
       console.log('Created Qri Structure', structure)
 
-      const readme = buildComponent.readme(metadata, domain)
+      const readme = buildComponent.readme(metadata, domainConfig)
       console.log('Created Qri Readme', readme)
 
-      const bodyUrl = `https://${domain}/api/views/${id}/rows.csv?accessType=DOWNLOAD`
+      const bodyUrl = `https://${domainConfig.domain}/api/views/${id}/rows.csv?accessType=DOWNLOAD`
       console.log('Downloading CSV', bodyUrl)
       const bodyBuffer = await fetch(bodyUrl).then(d => d.arrayBuffer())
 
@@ -38,27 +39,31 @@ const processDataset = async (domain, id) => {
       await writer(`tmp/${id}/meta.json`, qriMeta)
       await writer(`tmp/${id}/body.csv`, bodyBuffer, 'buffer')
 
-      const datasetName = slugify(qriMeta.title, {
+      const slug = slugify(qriMeta.title, {
         replacement: '-',
         lower: true,
         strict: true
       })
 
+      const datasetName = `${domainConfig.id}-${slug}`
+
       if (process.argv.includes('--save')) {
-        console.log(`saving me/${datasetName}...`)
+        console.log('foo',`${__dirname}/tmp/${id}/body.csv`)
         await qri.save(`me/${datasetName}`, {
           body: `${__dirname}/tmp/${id}/body.csv`,
           file: [
             `${__dirname}/tmp/${id}/meta.json`,
             `${__dirname}/tmp/${id}/readme.md`,
             `${__dirname}/tmp/${id}/structure.json`
-          ]
+          ],
+          title: `"programmatic update on ${new Date().toString()}"`,
+          message: '"programmatic update from socrata-etl script"'
         })
       }
 
-      if (process.argv.includes('--publish')) {
+      if (process.argv.includes('--push')) {
         console.log(`publishing me/${datasetName}...`)
-        await qri.publish(`me/${datasetName}`)
+        await qri.push(`me/${datasetName}`)
       }
 
 
@@ -72,11 +77,11 @@ const processDataset = async (domain, id) => {
   })
 }
 
-const datasetURL = process.argv[2]
-
-if (datasetURL) {
-  const [,,domain,,,id] = process.argv[2].split('/')
-  processDataset(domain, id)
-}
+// const datasetURL = process.argv[2]
+//
+// if (datasetURL) {
+//   const [,,domain,,,id] = process.argv[2].split('/')
+//   processDataset(domain, id)
+// }
 
 module.exports = processDataset

@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@qri-io/qri-node": "^0.0.3",
     "camelcase": "^6.0.0",
     "cheerio": "^1.0.0-rc.3",
     "fs-extra": "^9.0.0",

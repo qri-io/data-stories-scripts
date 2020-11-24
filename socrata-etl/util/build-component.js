@@ -13,7 +13,7 @@ const appendCustomFields = (qriMeta, metadata, customFieldsKeys) => {
   return qriMeta
 }
 
-const meta = (sourceMetadata, domain) => {
+const meta = (sourceMetadata, domainConfig) => {
   const {
     id: identifier,
     name: title,
@@ -42,19 +42,19 @@ const meta = (sourceMetadata, domain) => {
         email: undefined
       }
     ],
-    accessUrl: `https://${domain}/api/views/${identifier}/rows.csv?accessType=DOWNLOAD`,
+    accessUrl: `https://${domainConfig.domain}/api/views/${identifier}/rows.csv?accessType=DOWNLOAD`,
     createdAt,
     downloadCount,
     rowsUpdatedAt
   }
 
   // special handling for domain-specific custom metadata
-  if (domain === 'data.cityofnewyork.us') {
+  if (domainConfig.domain === 'data.cityofnewyork.us') {
     qriMeta.accrualPeriodicity = metadata.custom_fields.Update['Update Frequency'].trim(),
     qriMeta.agency = metadata.custom_fields['Dataset Information']['Agency'].trim()
   }
 
-  if (domain === 'data.ny.gov') {
+  if (domainConfig.domain === 'data.ny.gov') {
     const customFieldsKeys = ['Dataset Summary', 'Common Core', 'Additional Resources', 'Notes', 'Dataset Information']
     qriMeta = appendCustomFields(qriMeta, metadata, customFieldsKeys)
   }
@@ -62,14 +62,14 @@ const meta = (sourceMetadata, domain) => {
   return qriMeta
 }
 
-const readme = (metadata, domain) => {
+const readme = (metadata, domainConfig) => {
   const { id, name, description } = metadata
-  return `# ${name}
+  return `# ${domainConfig.displayName} Open Dataset - ${name}
 ${description}
 
 ## Import Details
 
-This qri dataset was programmatically created from a dataset published on a Socrata Open Data Portal.  [Original Dataset](https://${domain}/d/d/${id})
+This qri dataset was programmatically created from a dataset published on the ${domainConfig.displayName} Open Data Portal.  [Original Dataset](https://${domainConfig.domain}/d/d/${id})
 
 The latest update ran on ${Date(Date.now()).toString()}`
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "austin",
+    "domain": "data.austintexas.gov",
+    "displayName": "City of Austin"
+  },
+  {
+    "id": "nyc",
+    "domain": "data.cityofnewyork.us",
+    "displayName": "New York City"
+  },
+  {
+    "id": "maryland",
+    "domain": "opendata.maryland.gov",
+    "displayName": "State of Maryland"
+  }
+]

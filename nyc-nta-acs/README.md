@@ -12,4 +12,4 @@ This will extract the various layers from the file geodatabase, saving a CSV and
 
 ## Save qri datasets
 
-`node save-qri-datasets.js`
+In each subject directory, run `qri save me/{datasetname} --body body.csv --file meta.json --file readme.md --file structure.json`
