@@ -14,6 +14,7 @@ const setFirstDigit = (communityBoardsServed, newFirstDigit) => {
 const processProject = (rawText, pdfFilename) => {
 
   const lines = rawText.split('\n')
+  console.log(lines)
 
   let project = {}
   const milestones = []
@@ -134,7 +135,7 @@ const processProject = (rawText, pdfFilename) => {
         .split(' ')
         .map(d => parseInt(d))
 
-      let [,, nonCityPriorActuals, nonCity2021, nonCity2022, nonCity2023, nonCity2024, nonCity2025, nonCityRTC, nonCityTotal] = lines[i + 5]
+      let [,, nonCityPriorActuals, nonCity2021, nonCity2022, nonCity2023, nonCity2024, nonCity2025, nonCityRTC, nonCityTotal] = lines[i + 7]
         .replace(/\s+/g, " ")
         .replace(/\$|,/g, '')
         .split(' ')
@@ -214,6 +215,7 @@ const processProject = (rawText, pdfFilename) => {
     'project_description': null,
   }
 
+  console.log(project)
   return snakeCaseKeys(Object.assign(objectOrder, project))
 }
 

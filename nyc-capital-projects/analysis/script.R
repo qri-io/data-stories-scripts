@@ -4,7 +4,7 @@ library(sf)
 library(svglite)
 
 # import the csv
-raw <- read_csv('/Users/chriswhong/Desktop/capitalprojects/scraper/csv/combined.csv')
+raw <- read_csv('/Users/chriswhong/Sites/data-stories-scripts/nyc-capital-projects/scraper/csv/combined.csv')
 
 # hand-jam a dataframe of borough populations so we can normalize things if we want to later
 population <- frame_data(
@@ -26,9 +26,9 @@ boroughs <- group_by(raw, borough) %>% summarize(prior_actuals = sum(combined_pr
   )
 
 # totals for the whole dataset
-grand_total <- sum(raw$combined_total) #193.9 Billion
-grand_prior_actuals <- sum(raw$combined_prior_actuals) #72.2 Billion
-grand_planned_spending <- grand_total - grand_prior_actuals #121.7 Billion
+grand_total <- sum(raw$combined_total) #105.8 Billion
+grand_prior_actuals <- sum(raw$combined_prior_actuals) #40.9 Billion
+grand_planned_spending <- grand_total - grand_prior_actuals #64.9 Billion
 
 # breakdown for each borough + citywide
 by_borough <- group_by(raw, borough) %>% summarize(
@@ -81,7 +81,7 @@ group_by(borough, is_local) %>% summarize(
     values_from = combined_total
   ) %>% rename(c("boroughwide"="FALSE", "local"="TRUE"))
 
-write_csv(boroughs, '/Users/chriswhong/Desktop/capitalprojects/analysis/boroughwide.csv')
+write_csv(boroughs, '/Users/chriswhong/Desktop/boroughwide.csv')
 
 
 # prettify by multiplying by 1000 and using label_number_si to abbreviate
@@ -97,9 +97,9 @@ pretty_boroughs <- mutate(
 # analysis of one community district (mine), Brooklyn 6
 
 cd6 <- filter(raw, grepl("306",community_boards_served))
-write_csv(cd6, '/Users/chriswhong/Desktop/capitalprojects/analysis/cd6.csv')
+write_csv(cd6, '/Users/chriswhong/Desktop/cd6.csv')
 
-cd6_total <- sum(cd6$combined_total) # 921M
+cd6_total <- sum(cd6$combined_total) # 480.9M
 
 # analysis of one community district 208
 
@@ -149,7 +149,7 @@ all_combinations$breaks <- cut(all_combinations$combined_total,
 
 
 # small multiples for each ten_year_plan_category
-cds <- read_sf('/Users/chriswhong/Desktop/capitalprojects/analysis/community_districts/community_districts.shp') %>%
+cds <- read_sf('/Users/chriswhong/Sites/data-stories-scripts/nyc-capital-projects/analysis/data/community_districts/community_districts.shp') %>%
   mutate(boro_cd_string = toString(boro_cd)) %>%
   left_join(all_combinations, by=c('borocdstr' = 'community_boards_served'))
 
@@ -179,7 +179,7 @@ cds %>%
   ) +
   theme(strip.text.x = element_text(size = 3.5))
 
-ggsave("/Users/chriswhong/Desktop/capitalprojects/facet.pdf", width = 12, height = 12)
+ggsave("/Users/chriswhong/Desktop/facet.pdf", width = 12, height = 12)
 
 
 
