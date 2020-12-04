@@ -1,0 +1,43 @@
+November 2020                            CAPITAL CONSTRUCTION PROJECT DETAIL DATA                                       Page: 1
+                                                             ($ in 000's)
+
+
+ Managing Agency:         038 : BROOKLYN PUBLIC LIBRARY
+ Project Id:    LB20DUMBO
+ Project Description:      ADAMS STREET LIBRARY FIT OUT
+
+
+Ten-Year Plan Category:      ESSENTIAL RECONSTRUCTION OF FACILITIES
+
+Community Boards Served:           201
+
+Borough:       BROOKLYN
+
+Budget Lines:      LB-0101 LB-0108 LB-0104
+Original Budget:    $5,000
+
+Project Plan
+                                                                                 Plan
+                           Prior
+                         Actuals          2021      2022             2023               2024      2025      RTC          Total
+
+  City                        $0         $5,000       $0                    $0            $0         $0      $0         $5,000
+
+  Non-City                    $0            $0        $0                    $0            $0         $0      $0            $0
+
+
+                                                  Original                  Original           Current       Current
+Milestone                                         Start Date                End Date           Start Date    End Date
+DESIGN                                            Jan 2019                  Dec 2019           Jan 2021      Dec 2021
+CONSTRUCTION                                      Jan 2020                  Jun 2020           Jan 2020      Jun 2020
+
+Explanation for Delay:
+PROJECT DELAYED DUE TO CHANGES IN SCOPE/DESIGN
+
+
+Project Location:
+
+
+
+Scope Summary:
+NEW BRANCH FIT OUT

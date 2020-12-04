@@ -1,0 +1,19 @@
+{
+  "name": "capitalprojects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "line-by-line": "^0.1.6",
+    "objects-to-csv": "^1.3.6",
+    "pdf-text-extract": "^1.5.0",
+    "pdf2text": "^1.1.0",
+    "snakecase-keys": "^3.2.1"
+  }
+}
