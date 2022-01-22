@@ -12,7 +12,7 @@
     "cheerio": "^1.0.0-rc.3",
     "fs-extra": "^9.0.0",
     "json2csv": "^5.0.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "slugify": "^1.4.0"
   }
 }
