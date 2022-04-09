@@ -10,7 +10,7 @@
     "graceful-fs": "^4.2.3",
     "jsonexport": "^2.4.1",
     "jsonfile": "^4.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-fetch": "^2.6.0",
     "sax": "^1.2.4",
     "universalify": "^0.1.2",
