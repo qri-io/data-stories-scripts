@@ -6,7 +6,7 @@
   "dependencies": {
     "fs-extra": "^9.0.0",
     "google-polyline": "^1.0.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node-fetch": "^2.6.0",
     "tsv": "^0.2.0"
   }
